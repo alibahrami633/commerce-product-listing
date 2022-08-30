@@ -5,9 +5,9 @@
     min-width: 300px;
     max-width: 500px;
 
-    background-color: #cfcfcf;
+    background-color: #cfcfcf70;
     border-radius: 3px;;
-    box-shadow: 2px 2px 3px #00000065;    
+    box-shadow: 2px 2px 3px #00000045;    
 
     min-height: 100px;
     padding: 0.5em;
@@ -24,9 +24,6 @@
 .card-row {
     width: 100%;
     justify-content: center;
-}
-
-.on-sale {
 }
 
 .red-text {
@@ -48,6 +45,7 @@
 }
 
 .product-background {
+    display:flex;
     margin-top: 2px;
     margin-left: 2px;
     background-color: #ffffff;

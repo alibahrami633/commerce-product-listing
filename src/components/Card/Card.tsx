@@ -9,7 +9,7 @@ export default function Card({ product }: CardProps) {
   const discount: number = 0.1;
   return (
     <div className="card-container">
-      <div className="on-sale fixed-element">
+      <div className="fixed-element">
         {product.isSale && (
           <img
             src={require("../../assets/images/on-sale.png")}
