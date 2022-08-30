@@ -1,12 +1,4 @@
 export interface Product {
-  productName: string;
-  productImage: string;
-  price: string;
-  type: string;
-  isSale: boolean;
-}
-
-export interface Product {
   index: number;
   productName: string;
   productImage: string;
@@ -27,5 +19,5 @@ export interface ApiResponse<T> {
 }
 
 export interface Products {
-  list: Product[]
+  list: Product[];
 }
