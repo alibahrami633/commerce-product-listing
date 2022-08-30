@@ -1,10 +1,10 @@
 
-import './styles/App.css';
+import "./styles/App.css";
 
 function App(): JSX.Element {
   return (
     <div className="App">
-      This is the home page      
+       This is the product page
     </div>
   );
 }
