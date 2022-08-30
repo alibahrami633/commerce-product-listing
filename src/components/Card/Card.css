@@ -12,6 +12,13 @@
     min-height: 100px;
     padding: 0.5em;
     margin: 0.5em;
+
+    transition: transform .2s;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 @media (max-width: 712px) {
