@@ -4,20 +4,17 @@
     width: 20%;
     min-width: 300px;
     max-width: 500px;
-
     background-color: #cfcfcf70;
-    border-radius: 3px;;
-    box-shadow: 2px 2px 3px #00000045;    
-
+    border-radius: 3px;   
     min-height: 100px;
     padding: 0.5em;
     margin: 0.5em;
-
     transition: transform .2s;
 }
 
 .card-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 1px 1px 15px #00000045;
     cursor: pointer;
 }
 
