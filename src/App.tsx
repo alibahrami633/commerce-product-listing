@@ -22,6 +22,7 @@ function App(): JSX.Element {
             type="text"
             placeholder="Search..."
             className="search-bar"
+            id="search-bar"
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}
