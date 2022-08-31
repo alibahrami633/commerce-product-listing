@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# E-Commerce Sample App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to intall the project
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Please refer to the link above to see how to run create-react-app.
+3. After running it, just copy "src" folder, package.json file into your project installed folder.
+4. Run "npm install" in this folder to install the required packages.
 
-## Available Scripts
+## How to run the project
 
 In the project directory, you can run:
 
@@ -29,18 +33,13 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Future Improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project has some parts that can be improved with enough time. Here are the suggestions for the future developments:
+- The Search bar and filter can be separated from the app screen into re-usable components
+- This implementation requires more time and other libraries such as Redux or internal React libraries such as Context
+- A global "Products" state can be defined and changed by multiple tools such as search bar and filtering tool independently and the new state can be updated/consumed by the product catalogue component.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Considerations
+- I personally decided not to use any UI frameworks/libraries and just to go with pure CSS as I believe it can cause some complications as a project gets larger. It may result in more work at the beginning of any project with only CSS, but in the long run, the styling maintenance/updates would be easier if there is a common CSS library or small framework that is designed and developed by the team.
+- The data file is located in assets folder to be portable. In the future development, it can be replaced with API endpoints which should be defined/located in services->api folder (e.g., getProducts.ts, addProduct.ts, etc.).
