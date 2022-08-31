@@ -17,15 +17,17 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <div className="filterbar-container">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="search-bar"
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
-        <div className="filterbar-container full-width">
+        <div className="search-bar-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="search-bar"
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+        </div>
+        <div className="filterbar-container filterby-container">
           <label htmlFor="product-type" className="filterbar-title">
             Filter by
           </label>
@@ -37,7 +39,8 @@ function App(): JSX.Element {
             onChange={(event) => {
               setProductType(event.target.value);
             }}
-          ><option value="">All</option>
+          >
+            <option value="">All</option>
             {products.products
               .filter(
                 (product, index, self) =>
@@ -54,24 +57,35 @@ function App(): JSX.Element {
           </select>
         </div>
       </div>
-      {productsResponse ? (
-        <ProductsContainer
-          products={productsResponse
-            .filter((product) => {
-              if (productType === "") return product;
-              else if (product.type.toLocaleLowerCase().includes(productType.toLocaleLowerCase())) return product;
-              else return
-            })
-            .filter((product) => {
-              if (searchTerm === "") return product;
-              else if (product.productName.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) return product;
-              else return
-            })
-          }
-        />
-      ) : (
-        <div>No products found.</div>
-      )}
+      <div>
+        {productsResponse ? (
+          <ProductsContainer
+            products={productsResponse
+              .filter((product) => {
+                if (productType === "") return product;
+                else if (
+                  product.type
+                    .toLocaleLowerCase()
+                    .includes(productType.toLocaleLowerCase())
+                )
+                  return product;
+                else return;
+              })
+              .filter((product) => {
+                if (searchTerm === "") return product;
+                else if (
+                  product.productName
+                    .toLocaleLowerCase()
+                    .includes(searchTerm.toLocaleLowerCase())
+                )
+                  return product;
+                else return;
+              })}
+          />
+        ) : (
+          <div>No products found.</div>
+        )}
+      </div>
     </div>
   );
 }

@@ -15,7 +15,9 @@
 
 .filterbar-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .filterbar-title {
@@ -23,10 +25,17 @@
   font-weight: 500;
 }
 
-.full-width {
-  width: 100%;
-  margin: 0.5em 5em;
-  align-items: center
+.filterby-container {
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+@media (max-width: 560px) {
+  .filterby-container {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .drop-down {
@@ -41,17 +50,16 @@
   padding: 50px 50px;
 }
 
-.filter-search {
+.search-bar {
   width: 300px;
-  padding: 0.5em;
-  border-radius: 5px;
+  height: 40px;
+  border-radius: 3px;
   border-width: 1px;
-  margin-right: 2em;
 }
 
-@media (max-width: 700) {
-  .search-bar {
-      width: 150px; 
+@media (max-width: 574px) {
+  .search-bar-container,.search-bar {
+    width: 90%;
   }
 }
 
