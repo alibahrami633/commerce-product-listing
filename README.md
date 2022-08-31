@@ -23,6 +23,8 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+`- Please note that snapshot tests are runningin this project. The snapshot folder is not commited to the repository. So, if yourun the tests and made any changes on the code afterwards, please update your local snapshots by pressong 'u' while the test command is running.`
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
