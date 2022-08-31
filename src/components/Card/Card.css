@@ -13,7 +13,7 @@
 }
 
 .card-container:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 1px 1px 15px #00000045;
     cursor: pointer;
 }
@@ -46,6 +46,10 @@
 .product-image {
     width: 100%;
     max-width: 300px;
+}
+
+.sale-image {
+    width: 50px;
 }
 
 .product-background {

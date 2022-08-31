@@ -14,7 +14,7 @@ export default function Card({ product }: CardProps) {
           <img
             src={require("../../assets/images/on-sale.png")}
             alt="on-sale"
-            width="50px"
+            className="sale-image"
           />
         )}
       </div>

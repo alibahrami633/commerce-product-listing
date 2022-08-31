@@ -27,7 +27,7 @@ function App(): JSX.Element {
             }}
           />
         </div>
-        <div className="filterbar-container filterby-container">
+        <div className="filterby-container">
           <label htmlFor="product-type" className="filterbar-title">
             Filter by
           </label>
