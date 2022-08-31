@@ -6,12 +6,14 @@ import ProductsContainer from "./components/ProductsContainer/ProductsContainer"
 import { Product } from "./common/interfaces";
 
 function App(): JSX.Element {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [productType, setProductType] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [productType, setProductType] = useState<string>("");
   const [productsResponse, setProductsResponse] = useState<Array<Product>>();
 
   useEffect(() => {
     setProductsResponse(products.products); // to be replaced with API calls from services -> api
+    setIsLoading(false); // should be added to API call after the call receives the response
   }, []);
 
   return (
@@ -59,7 +61,7 @@ function App(): JSX.Element {
         </div>
       </div>
       <div>
-        {productsResponse ? (
+        {productsResponse && !isLoading ? (
           <ProductsContainer
             products={productsResponse
               .filter((product) => {
@@ -80,6 +82,12 @@ function App(): JSX.Element {
                     .includes(searchTerm.toLocaleLowerCase())
                 )
                   return product;
+                  else if (
+                    product.type
+                      .toLocaleLowerCase()
+                      .includes(searchTerm.toLocaleLowerCase())
+                  )
+                    return product;
                 else return;
               })}
           />

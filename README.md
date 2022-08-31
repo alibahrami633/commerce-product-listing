@@ -1,5 +1,10 @@
 # E-Commerce Sample App
 
+## How to use the App
+- After the installation, Simply just search through the products list or filter the displayed products by its type.
+- The search bar will look for the string matches in product names and product type and filters the outcome accordingly.
+
+
 ## How to intall the project
 1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 2. Please refer to the link above to see how to run create-react-app.
