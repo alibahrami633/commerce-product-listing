@@ -6,10 +6,8 @@
 
 
 ## How to intall the project
-1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-2. Please refer to the link above to see how to run create-react-app.
-3. After running it, just copy "src" folder, package.json file into your project installed folder.
-4. Run "npm install" in this folder to install the required packages.
+1. Clone the repo into your local
+2. Run "npm install" in this folder root to install the packages
 
 ## How to run the project
 
